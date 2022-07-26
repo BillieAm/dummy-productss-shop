@@ -1,10 +1,15 @@
 import logo from "../logo.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
-      <img src={logo} alt="dummy logo" />
-      <i class="ri-shopping-cart-line"></i>
+      <Link to="/">
+        <img src={logo} alt="dummy logo" />
+      </Link>
+      <Link to="/cart">
+        <i class="ri-shopping-cart-line"></i>
+      </Link>
     </header>
   );
 }
