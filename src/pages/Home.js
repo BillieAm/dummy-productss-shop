@@ -1,43 +1,24 @@
-function Home() {
+const Home = () => {
+  const categories = [
+    { id: 1, title: "Category 1" },
+    { id: 2, title: "Category 2" },
+    { id: 3, title: "Category 3" },
+    { id: 4, title: "Category 4" },
+    { id: 5, title: "Category 5" },
+  ];
   return (
     <main className="categories-container">
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-title-container">
-          <h2>Category 1</h2>
-          <p>Shop Now</p>
+      {categories.map(({ id, title }) => (
+        <div key={id} className="category-container">
+          {/* <img /> */}
+          <div className="category-title-container">
+            <h2>{title}</h2>
+            <p>Shop Now</p>
+          </div>
         </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-title-container">
-          <h2>Category 2</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-title-container">
-          <h2>Category 3</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-title-container">
-          <h2>Category 4</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* <img /> */}
-        <div className="category-title-container">
-          <h2>Category 5</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
+      ))}
     </main>
   );
-}
+};
 
 export default Home;
