@@ -30,6 +30,11 @@ const App = () => {
       title: "Category 5",
       imagePath: "/img/img5.jpg",
     },
+    {
+      id: 6,
+      title: "Category 6",
+      imagePath: "/img/img2.jpg",
+    },
   ];
 
   return (
