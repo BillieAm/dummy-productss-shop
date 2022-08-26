@@ -1,3 +1,4 @@
+// cSpell:ignore musica
 import { Outlet, Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/Musica.svg";
