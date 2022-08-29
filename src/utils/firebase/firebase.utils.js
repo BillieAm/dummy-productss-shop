@@ -1,4 +1,3 @@
-// cSpell:ignore firestore, musica, firebaseapp, appspot
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -19,12 +18,13 @@ const firebaseConfig = {
   appId: "1:860067093164:web:1325b1cd7c6ca8ebed1d09",
 };
 
-// Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 
-googleProvider.setCustomParameters({ prompt: "select_account" });
+googleProvider.setCustomParameters({
+  prompt: "select_account",
+});
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () =>
@@ -66,11 +66,11 @@ export const createUserDocumentFromAuth = async (
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
-  return createUserWithEmailAndPassword(auth, email, password);
+  return await createUserWithEmailAndPassword(auth, email, password);
 };
 
 export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
-  return signInWithEmailAndPassword(auth, email, password);
+  return await signInWithEmailAndPassword(auth, email, password);
 };
